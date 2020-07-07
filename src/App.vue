@@ -1,28 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <c-theme-provider>
+    <c-reset />
+    <!--Your application goes here -->
+    <Nav />
+    <Main /> 
+  </c-theme-provider>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { CThemeProvider, CReset } from "@chakra-ui/vue";
+import Nav from './components/Nav'
+import Main from './components/Main'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    CThemeProvider,
+    CReset,
+    Nav,
+    Main
   }
-}
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
